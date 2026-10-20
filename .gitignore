@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +40,21 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# supabase
+supabase/.temp
+
+# Private local notes and credential scratchpads
+/README/
+*.txt
+
+# Local IDE and AI-agent configuration
+.vscode/
+.gemini/
+
+# Supabase temporary project metadata
+/supabase/.temp/
+
+# Scratch and raw master assets
+/img/logo.png
+/assets/brand/creatorpilot-master.png
