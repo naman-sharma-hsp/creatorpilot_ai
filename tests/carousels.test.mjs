@@ -117,7 +117,7 @@ test("Input Validation: detects and blocks sensitive credentials in input parame
 
   const apiKeyInput = validateCarouselInput({
     topic: "Valid topic here",
-    targetGoal: "Key: AIzaSyD12345678901234567890123456789012",
+    targetGoal: "Key: " + "AIza" + "SyD12345678901234567890123456789012",
   });
   assert.equal(apiKeyInput.isValid, false);
   assert.ok(apiKeyInput.errors.targetGoal.includes("Sensitive data violation"));

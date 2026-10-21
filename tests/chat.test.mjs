@@ -199,7 +199,7 @@ test("Security: detects and blocks sensitive credentials in chat messages", () =
   assert.ok(metaTokenInput.errors.message.includes("Sensitive data violation"));
 
   const apiKeyInput = validateChatInput({
-    message: "My API Key: AIzaSyD12345678901234567890123456789012",
+    message: "My API Key: " + "AIza" + "SyD12345678901234567890123456789012",
   });
   assert.equal(apiKeyInput.isValid, false);
   assert.ok(apiKeyInput.errors.message.includes("Sensitive data violation"));

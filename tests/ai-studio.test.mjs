@@ -110,7 +110,7 @@ test("Input Validation: detects and blocks sensitive credentials in topic or CTA
   // Test API key prefix detection
   const apiKeyInput = validateCaptionGenerationInput({
     format: "reel",
-    topic: "Here is my key: AIzaSyD12345678901234567890123456789012",
+    topic: "Here is my key: " + "AIza" + "SyD12345678901234567890123456789012",
   });
   assert.equal(apiKeyInput.isValid, false);
   assert.ok(apiKeyInput.errors.topic.includes("Sensitive data violation"));

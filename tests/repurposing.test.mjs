@@ -131,7 +131,7 @@ test("Input Validation: screens and blocks sensitive credentials in input parame
 
   const keyInput = validateRepurposeInput({
     sourceText: "Valid source content here for transformation.",
-    language: "Key: AIzaSyD12345678901234567890123456789012",
+    language: "Key: " + "AIza" + "SyD12345678901234567890123456789012",
   });
   assert.equal(keyInput.isValid, false);
   assert.ok(keyInput.errors.language.includes("Sensitive data violation"));

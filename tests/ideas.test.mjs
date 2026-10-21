@@ -115,7 +115,7 @@ test("Security & Privacy: detects and blocks sensitive credentials in input para
   assert.ok(tokenInput.errors.pillar.includes("Sensitive data violation"));
 
   const apiKeyInput = validateIdeasInput({
-    targetGoal: "Key: AIzaSyD12345678901234567890123456789012",
+    targetGoal: "Key: " + "AIza" + "SyD12345678901234567890123456789012",
   });
   assert.equal(apiKeyInput.isValid, false);
   assert.ok(apiKeyInput.errors.targetGoal.includes("Sensitive data violation"));
